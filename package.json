@@ -56,8 +56,8 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "org:vaults": {
+        "description": "manage your organization vaults"
       }
     }
   },
