@@ -1,7 +1,14 @@
 coveo-vault-plugin
 =================
 
-manage your organization vaults
+Plugin to extend Coveo CLI and Manage your organization vaults
+
+Add to Coveo CLI:
+Install the published plugin into the Coveo CLI:
+
+```bash
+coveo plugins:install coveo-vault-plugin
+```
 
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
