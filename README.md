@@ -69,12 +69,10 @@ Create a new Vault parameter in the specified organization
 
 ```
 USAGE
-  $ coveo-vault-plugin org vaults create -k <value> -n <value> -o <value> -v <value> [-t PUBLIC|OBFUSCATED|STRICT]
+  $ coveo-vault-plugin org vaults create -n <value> -v <value> [-t PUBLIC|OBFUSCATED|STRICT]
 
 FLAGS
-  -k, --apiKey=<value>       (required) API key for the organization
   -n, --key=<value>          (required) Key for the Vault parameter
-  -o, --orgId=<value>        (required) Coveo organization ID
   -t, --visibility=<option>  [default: PUBLIC] Visibility type (PUBLIC, OBFUSCATED, or STRICT)
                              <options: PUBLIC|OBFUSCATED|STRICT>
   -v, --value=<value>        (required) Value for the Vault parameter
@@ -91,14 +89,16 @@ List all Vault parameters in the specified organization
 
 ```
 USAGE
-  $ coveo-vault-plugin org vaults list -k <value> -o <value>
+  $ coveo-vault-plugin org vaults list [--json]
 
-FLAGS
-  -k, --apiKey=<value>  (required) API key for the organization
-  -o, --orgId=<value>   (required) Coveo organization ID
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
   List all Vault parameters in the specified organization
+
+EXAMPLES
+  coveo org:vaults:list
 ```
 
 _See code: [src/commands/org/vaults/list.ts](https://github.com/Coveo-Turbo/coveo-vault-plugin/blob/v0.0.0/src/commands/org/vaults/list.ts)_
