@@ -76,13 +76,17 @@ Create a new Vault parameter in the specified organization
 
 ```
 USAGE
-  $ coveo-vault-plugin org vaults create -n <value> -v <value> [-t PUBLIC|OBFUSCATED|STRICT]
+  $ coveo-vault-plugin org vaults create -n <value> -v <value> [-r EXTENSION|SOURCE -s <value>...] [-t
+    PUBLIC|OBFUSCATED|STRICT]
 
 FLAGS
-  -n, --key=<value>          (required) Key for the Vault parameter
-  -t, --visibility=<option>  [default: PUBLIC] Visibility type (PUBLIC, OBFUSCATED, or STRICT)
-                             <options: PUBLIC|OBFUSCATED|STRICT>
-  -v, --value=<value>        (required) Value for the Vault parameter
+  -n, --key=<value>            (required) Key for the Vault parameter
+  -r, --resourceType=<option>  [default: EXTENSION] Resource type for Scope of the Vault parameter
+                               <options: EXTENSION|SOURCE>
+  -s, --scope=<value>...       Scope for the Vault parameter
+  -t, --visibility=<option>    [default: OBFUSCATED] Visibility type (PUBLIC, OBFUSCATED, or STRICT)
+                               <options: PUBLIC|OBFUSCATED|STRICT>
+  -v, --value=<value>          (required) Value for the Vault parameter
 
 DESCRIPTION
   Create a new Vault parameter in the specified organization
